@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+*:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #c59d5f;
+    --body-font-color: #515151;
+}
+html{
+	font-family: var(--body-font);
+	font-size:10px;
+	color: var(--body-font-color);
+	scroll-behavior:smooth;
+}
+
+img{
+	width: 100%;
+	max-width:100%;
+}
+a{
+	text-decoration: none;
+}
+p{
+	font-size:1.6rem;
+}
+.container{
+	width:100%;
+	max-width: 122.5rem;
+	margin:0 auto;
+}
+header{
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	background-image: linear-gradient(to bottom,rgba(0,0,0,0.5),transparent);
+}
+.nav{
+	height:7.2rem;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.nav-list{
+	list-style:none;
+	position:initial;
+	width:initial;
+	height:initial;
+	background-color:transparent;
+	padding:0;
+	justify-content:initial;
+	display:flex;
+	flex-direction:row;
+	transition:initial;
+}
+.nav-item{
+	margin:0 2.4rem;
+}
+.nav-item:last-child{
+	margin-right:0;
+}
+.name{
+	display:block;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:1.25rem;
+	letter-spacing:2px;
+	margin-right:2px;
+	transition:color.5s;
+}
+.nav-link{
+	display:block;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:1.25rem;
+	letter-spacing:2px;
+	margin-right:-2px;
+	transition:color.5s;
+}
+.nav-link:hover{
+	color:var(--secondary-font-color);
+}
+.hero-img{
+	width:100%;
+	height:100vh;
+	background: url("Images/bg.jpg") center no-repeat;
+	display:flex;
+	align-items: center;
+	text-align: center;
+	opacity:0.9;
+}
+.spanning{
+	font-size:7rem;
+	font-family:var(--secondary-font);
+	color:red;
+	font-weight:300;
+	line-height:25%;
+	letter-spacing:3px;
+}
+.title{
+	color:#fff;
+	font-size:6rem;
+	font-family:var(--main-font);
+	text-transform:uppercase;
+	font-weight:500;
+	letter-spacing:0.5rem;
+	margin-right:-0.5rem;
+}
+.seperator{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.line{
+	width:100%;
+	max-width:11.5rem;
+	height:.25rem;
+	background-color:#fff;
+	position:relative;
+}
+.line-right::before,.line-left::before{
+	content:'';
+	position:absolute;
+	border:.6rem solid transparent;
+	border-right-color:#fff;
+	top:50%;
+	transform:translateY(-50%);
+
+}
+.car{
+	font-size:1.5rem;
+	color:#fff;
+	margin:0 1.6rem;
+	transform:translateY(-50%);
+}
+.caption{
+	color:#fff;
+	font-size:1.4rem;
+	font-weight:100;
+	margin-bottom:1.2rem;
+	letter-spacing:2.5px;
+	margin-right:-3px;
+	padding-bottom: 12px;
+}
+.search-box{
+	position:absolute;
+	border-radius:40px;
+	height:40px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,120%);
+	border-radius:50px;
+	background-color:#fff;	
+	padding-left:20px;
+}
+.search-icon{
+	color:#fff;
+	float:right;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	cursor: pointer;
+	background:#181818;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.search-txt{
+	border:none;
+	background:none;
+	outline:none;
+	float:left;
+	padding:0;
+	color:#181818;
+	font-size:15px;
+	font-family:var(--main-font);
+	transition:0.4s;
+	line-height:50px;
+	transform:translate(0,60%);
+	width:350px;
+	
+}
+.suggestionsBox {
+position: absolute;
+margin: 0px 0px 0px 0px;
+width: 350px;
+background-color: #fff;
+-moz-border-radius: 7px;
+	font-size:15px;
+-webkit-border-radius: 7px;
+color: black;
+left:475px;
+top:375px;
+}
+.suggestionList {
+margin: 0px;
+padding: 2px;
+}
+.suggestionList li {
+	list-style:none;
+margin: 0px 0px 3px 0px;
+font-family:var(--main-font);
+padding: 3px;
+cursor: pointer;
+}
+.suggestionList li:hover {
+}
+.sep{
+	border: 1.5px solid white;
+  	border-radius: 5px;
+}
+@media screen and (max-width: 900px) {
+	.search-icon{
+	color:#fff;
+	float:right;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background:#181818;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transform:translateY(-100%);
+}
+.search-txt{
+	border:none;
+	background:none;
+	outline:none;
+	float:left;
+	padding:0;
+	color:#181818;
+	font-size:18px;
+	transition:0.4s;
+	line-height:40px;
+	width:350px;
+}
+.container{
+	width:100%;
+	max-width: 122.5rem;
+	margin:0 auto;
+	padding:0 2.4rem;
+}
+
+}
